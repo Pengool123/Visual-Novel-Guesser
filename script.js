@@ -421,6 +421,9 @@ async function loadData(){
     });
     const data1 = await resp.json();
     VNs = data1.results.map(item => {
+        const eroCount = item.tags.filter(tag => tag.category === "ero").length;
+        const hasEro = eroCount >= 3;
+
         return {
             id: item.id,
             title: item.title,
@@ -438,7 +441,8 @@ async function loadData(){
                 rel.relation_official &&
                 rel.relation !== "char"
             ),
-            img: item.image
+            img: item.image,
+            Ero: hasEro
         };
     });
 
@@ -460,6 +464,9 @@ async function loadData(){
     });
     const data2 = await resp2.json();
     VNs2 = data2.results.slice(0, 50).map(item => {
+        const eroCount = item.tags.filter(tag => tag.category === "ero").length;
+        const hasEro = eroCount >= 3;
+
         return {
             id: item.id,
             title: item.title,
@@ -477,7 +484,8 @@ async function loadData(){
                 rel.relation_official &&
                 rel.relation !== "char"
             ),
-            img: item.image
+            img: item.image,
+            Ero: hasEro
         };
     });
 }
@@ -523,30 +531,6 @@ async function getExtra(){
     const data2 = await resp2.json();
     hasAni = data2.results.length >= 1 ? true : false;
 
-    //ero check
-    let tempId = parseInt(currID.substring(1));
-    const ageApi = "https://api.vndb.org/kana/release";
-    const reqOptions3 = {
-        "filters": ["and", ["minage", "=", 18], ["id", "=", tempId]] ,
-	    "fields": "id, minage, title",
-	    "results": 1,
-        "page": 1
-    }
-    const resp3 = await fetch(ageApi,{
-        method: "POST",
-        headers: {
-            "Content-Type" : "application/json"
-        },
-        body: JSON.stringify(reqOptions3)
-    });
-    const data3 = await resp3.json();
-
-    if (data3.results.length === 0){
-        ero = false;
-    }else{
-        ero = true;
-    }
-
 }
 
 //stupid thing to make the json loader not break everything
@@ -560,7 +544,7 @@ async function main() {
 
     currName = currVN.title;
     currID = currVN.id;
-    currAge = currVN.ero;
+    ero = currVN.Ero;
     currLang = currVN.langs;
     currRating = currVN.rating;
     currVoteCount = currVN.votecount;
