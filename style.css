@@ -1,0 +1,183 @@
+*
+{
+    /*outline: 2px solid red;*/
+    width: auto;
+    color: white;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+    margin: 0;
+}
+
+.flex-container{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-container .HomeRow{
+    flex: 1;
+    width: 100%;
+    height: 4vh;
+    text-align: center;
+    margin-bottom: .5vh;
+}
+
+.flex-container .HomeRow > *{
+    color: white;
+}
+
+.Links{
+    padding: 10px;
+    text-align: center;
+    background-color: red;
+}
+
+.Links a{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.PlayZone{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    width: auto;
+    height: 40vh;
+}
+
+.VnPic img{
+    padding: 0px;
+    max-height: 50vh;
+    max-width: 50vh;
+}
+
+.Hints{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.Hints *{
+    display: flex;
+    flex: 1;
+    font-size: 3vh;
+}
+
+.Hints-row1{
+    flex: 0 0 33vh;
+    width: 100vh;
+    flex-direction: column;
+}
+
+.Hints-row1 .Tags, .Series, .Quotes{
+    width: 100vh;
+    overflow: scroll;
+    border: .2vh solid red;
+    background-color: black;
+}
+
+.Hints-row1 .Tags > *{
+    flex-wrap: nowrap;
+    flex: 0 0 auto;
+    margin-left: .3vh;
+    margin-right: .3vh;
+    font-size: 1.5vh;
+    height: 2vh;
+    padding: .1vh;
+}
+
+.Hints-row1 .Series > *{
+    flex: 0 0 auto;
+    margin-left: .3vh;
+    margin-right: .3vh;
+    padding: 1vh;
+}
+
+.Hints-row1 .Quotes > *{
+    text-align: center;
+    text-wrap: wrap;
+}
+
+.Hints-row1 *{
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Hints-row2{
+    flex-direction: column;
+    flex: 0 0 auto;
+    width: 100vh;
+}
+
+.Hints-row2 *{
+    font-size: 1.5vh;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Hints-row2 .RowOne, .RowTwo{
+    width: 100vh;
+}
+
+.Hints-row2 .Lang, .HasAnime, .AgeRating, .Length, .Ranking, .Popularity{
+    display: flex;
+    align-items: center;
+    align-items: center;
+    border: .2vh solid red;
+    background-color: black;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    height: 7vh;
+}
+
+.Hints-row2 .Lang, .HasAnime, .AgeRating, .Length{
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+.Hints-row2 .Lang > *, .HasAnime > *, .AgeRating > *, .Length > *, .Ranking > *, .Popularity > *{
+    height: auto;
+    margin: 0;
+    text-align: center;
+}
+
+
+.Hints-row2 {
+    height: auto;
+    margin: 0;
+    text-align: center;
+}
+
+.Typing{
+    padding: 1vh;
+    text-align: center;
+}
+
+.Typing > *{
+    color: black;
+}
+
+#VNsuggestions *{
+    font-size: 2.5vh;
+    text-align: center;
+    list-style-type: none;
+}
+
+input{
+    width: 40vh;
+    text-align: center;
+    font-size: 2vh;
+}
+
+#kagari{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    height: 40vh;
+}

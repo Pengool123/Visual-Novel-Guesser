@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <title>VN Guesser</title>
+</head>
+<body>
+    <div class="flex-container">
+        
+        <div class="HomeRow">
+            <h1 class="Title">VISUAL NOVEL GUESSER</h1>
+            <div class="Links">
+                <a href=".">Home</a>
+                <a href="./about/About.html">About</a>
+            </div>
+        </div>
+
+        <div class="PlayZone">
+            <div class="VnPic">
+                <img id="vnPic" src="img/huh.png" alt="">
+            </div>
+
+            <div class="Hints">
+                <div class="Hints-row1">
+                    <div class="Tags">
+                    </div>
+                    <div class="Series">
+                    </div>
+                    <div class="Quotes">
+                    </div>
+                </div>
+                <div class="Hints-row2">
+                    <div class="RowOne">
+                        <div class="Ranking">
+                        </div>
+                        <div class="Popularity">
+                        </div>
+                    </div>
+                    <div class="RowTwo">
+                        <div class="Lang">
+                        </div>
+                        <div class="HasAnime">
+                        </div>
+                        <div class="AgeRating">
+                        </div>
+                        <div class="Length">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="Typing">
+            <input type="text" name="TypingInput" id="TextBox" placeholder="Type In Your Visual Novel Guess"
+            onkeyup="inputEvent(event)" onkeypress="suggFilter()">
+            <div id="VNsuggestions"></div>
+        </div>
+        <div class="reset">
+            <button id="RestartB" style="color: black; visibility: hidden;" onclick="main();">Restart</button>
+        </div>
+    </div>
+    <img id="kagari" src="./img/kagari.png" alt="">
+</body>
+</html>
