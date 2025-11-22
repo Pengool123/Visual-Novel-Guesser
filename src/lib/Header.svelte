@@ -1,0 +1,18 @@
+<script>
+
+</script>
+
+<main class=" min-h-[6vh]">
+    <div id="title"
+    class=" flex justify-center">
+        <h1 class=" text-[2.5vh]">Visual Novel Guesser</h1>
+    </div>
+    
+    <div id="banner"
+    class=" bg-[var(--outline)] h-2vh text-[calc(min(1.5vh,1.5vw))] text-center
+    [&>*]:mx-[2vw]">
+        <a href="/index.html">Home</a>
+        <a href="/settings.html">Settings</a>
+        <a href="https://github.com/Pengool123">GitHub</a>
+    </div>
+</main>
