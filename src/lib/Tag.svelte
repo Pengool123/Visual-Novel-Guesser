@@ -23,7 +23,7 @@
             
             {#if ero}
                 <span id="ero"
-                style="font-size: font-size: calc({strength}/3 * min(1.5vh,1.5vw))"
+                style="font-size: font-size: calc({strength}/3 * min(2vh,2vw))"
                 class=" align-top -tracking-tight relative -left-[calc(min(0.3vw,0.3vh))] -top-1 text-pink-500">
                 H
                 </span>

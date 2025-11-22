@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
     import {onMount, createEventDispatcher} from 'svelte';
     import {get} from 'svelte/store';
-    import {currVN, hintUpdate, win, relationCheck} from './gameMech';
+    import {currVN, hintUpdate, hintAmount, maxHints, win, relationCheck} from './gameMech';
     import {VNList} from './startUp';
     import {getCookie} from './cookie';
     import VNDisplay, { tagOverlap } from './VisualNovelDisplay.svelte';
@@ -15,14 +15,15 @@
 
     let searchBar: HTMLDivElement;
     let sugBox: HTMLDivElement;
-    const eroAllowed = getCookie("eroVN");
+    let eroAllowed = true;
+
+    export function resetHintInput(){
+        eroAllowed = getCookie("eroVN");
+        inputted = [];
+    }
 
     export let inputValue: string;
     const placeholder: string = "Enter Visual Novel Here";
-
-    export function resetInputted(){
-        inputted = [];
-    }
     
     //auto complete
     timer = setInterval(() => {
@@ -70,6 +71,17 @@
                 }catch{
                     console.log("suggestion box is already empty");
                 }
+                inputted.forEach((title: string) => {
+                    const p = document.createElement("p");
+                    p.textContent = title;
+                    if(title !== get(currVN).title){
+                        p.style.color = "red";
+                    }else{
+                        p.style.color = "green";
+                    }
+                    sugBox.appendChild(p);
+                });
+            
             }
         }
         
@@ -77,12 +89,12 @@
 
     function check(){
         let autoFilled: string = "";
+        tempInput = "";
         if(recList.length >= 1){autoFilled = recList[0].title;}
         if(!inputted.includes(autoFilled)){
             inputted.push(autoFilled);
             if(autoFilled === get(currVN).title){
                 win();
-                dispatch("correct");
             }else{
                 //in gameMech.ts
                 hintUpdate();
@@ -90,10 +102,11 @@
                     relationCheck(recList[0]);
                     tagOverlap(recList[0]);
                 }
-                sugBox.innerHTML = "";
-                searchBar.value = "";
-                recList = [];
             }
+            sugBox.innerHTML = "";
+            searchBar.value = "";
+            inputValue = "";
+            recList = [];
         }
     }
 </script>
@@ -132,6 +145,6 @@ class=" w-full flex flex-col items-center">
     <div id="suggestBox"
     bind:this={sugBox}
     class=" items-center mr-[min(2vw,2vh)]
-    [&>*]:text-center [&>*]:text-[calc(1.5vh)] [&>*]:lg:text-[calc(2.5vh)] [&>*]:cursor-pointer [&>*]:my-[1vh] [&>*]:outline [&>*]:bg-[var(--transp-bg)]">
+    [&>*]:text-center [&>*]:text-[calc(min(1.5vw,1.5vh))] [&>*]:lg:text-[calc(min(2vw,2vh))] [&>*]:cursor-pointer [&>*]:my-[1vh] [&>*]:outline [&>*]:bg-[var(--transp-bg)]">
     </div>
 </main>

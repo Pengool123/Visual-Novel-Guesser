@@ -282,8 +282,6 @@ export async function StartUp(){
     VNMap.clear();
     response = null as any;
     response2 = null as any;
-    
-    console.log(VNList);
 }
 
 //checks if the user has the cookies, if not then feed them yummy cookies

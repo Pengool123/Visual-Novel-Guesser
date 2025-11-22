@@ -47,7 +47,6 @@
         }
 
     let sortedTags: Tag[] = [];
-    $: console.log(sortedTags);
     
     $: sortedTags = [...$tagList].sort((a, b) => {
         if(a.rating !== b.rating){return b.rating - a.rating;}
@@ -56,7 +55,6 @@
 
     //give the user 5 random tags to start with
     $: if ($hintAmount <= 0 && $currVN !== undefined){
-        console.log("called");
         $tagList = [];
         const visited: number[] = [];
         const tempTagListArr: Tag[] = Array.from(get(currVN).tagList.values());
@@ -83,13 +81,14 @@
                 Math.round($currVN.image.imgV) <= getCookie("vImgLvl")){
                 vnImg.style.filter = 'none';
             }
+            vnImg.onclick = () => {window.open(`https://vndb.org/${$currVN.id}`)};
             $showImg = true;
         }
 </script>
 
-<main class=" text-[2vw] lg:text-[2vh]">
+<main class=" text-[2vw] lg:text-[1.75vh]">
     <div id="topDisplayArea"
-    class=" flex justify-center w-[60vw] h-[60vh] lg:mx-[min(2vw,2vh)] my-[min(2vw,2vh)] outline bg-[var(--transp-bg)] overflow-visible flex-col lg:flex-row">
+    class=" flex justify-center w-[60vw] h-[55vh] lg:mx-[min(2vw,2vh)] my-[min(2vw,2vh)] outline bg-[var(--transp-bg)] overflow-visible flex-col lg:flex-row">
         <div id="picture"
         class=" flex lg:w-1/2 justify-center lg:justify-end items-center">
             

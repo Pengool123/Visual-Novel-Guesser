@@ -159,12 +159,12 @@
             on:click={updateVImgLvl}
             on:mouseenter={()=>onDescHover(`Affects on when the visual novel image is fully shown
             <br>None: the image is blurred if deemed violent in any way
-            <br>Violent: will show if the image is violent but not gory
-            <br>Gory: will show no matter the violence`)}
+            <br>Violent: will show if the image is violent but not Brutal
+            <br>Brutal: will show no matter the violence`)}
             on:mouseleave={()=>onDescLeave()}>
                 Image Violence Content: 
                 {#if $vImgLvl == 2}
-                    Gory
+                    Brutal
                 {:else if $vImgLvl == 1}
                     Violent
                 {:else}

@@ -15,7 +15,6 @@
   let timer;
 
   onMount(async() =>{
-      console.log('starting up');
 
       timer = setInterval(() => {
           dots = dots.length < 3 ? dots + '.' : '';
@@ -24,11 +23,8 @@
       try{
         if(VNList.length <= 0){
           await StartUp();
-        }else{
-          console.log('already done before');
         }
         loading = false;
-        console.log('started up');
       }catch(err){
           console.error('start up failed', err);
       }finally{

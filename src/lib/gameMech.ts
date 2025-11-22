@@ -5,7 +5,7 @@ import { writable, get } from "svelte/store";
 import { getCookie } from "./cookie";
 import Tag from "./Tag.svelte";
 import { tagOverlap } from "./VisualNovelDisplay.svelte";
-import { resetInputted } from "./HintInput.svelte";
+import { resetHintInput } from "./HintInput.svelte";
 
 //for VisualNovelDisplay
 export const currVN = writable<VisualNovel>();
@@ -33,7 +33,7 @@ export function reset(){
             if(!eroAllowed && !VNList[rand].hasEro){found = true;}
             if(eroAllowed){found = true;}
         }
-        resetInputted();
+        resetHintInput();
         currVN.set(VNList[rand]);
         console.log(get(currVN));
 
@@ -75,7 +75,6 @@ export function win(){
 function showRest(){
     hintAmount.set(get(maxHints));
     get(currVN).relatedTitles.forEach((relVN:RelatedVN)=>{
-        console.log(relVN);
         if(!get(relatedList)[relVN.connection].includes(relVN.title)){
             relatedList.update((arr) => {
                 const newArr = [...arr];
@@ -158,7 +157,6 @@ async function getMisc(){
     if(get(currVN).languages.includes(Language.Other)){
         tempLangFlags += "➕";
     }
-    console.log(tempLangFlags);
     langFlags.set(tempLangFlags);
 
     popRange.update(() => {
@@ -192,7 +190,6 @@ async function getMisc(){
         }else{ //upper half
             range = `${(rounded - .5).toFixed(2)} - ${(rounded).toFixed(2)}`;
         }
-        console.log(range);
 
         return range;
     })
