@@ -1,5 +1,7 @@
 # Visual Novel Guesser
 
+[Play here](https://pengool123.github.io/Visual-Novel-Guesser/)<br>
+
 ![Blank look](githubImgs/initLook.png)
 <br>
 Guess the visual novel based on the hints given and tag overlaps from guessed visual novels.<br>
@@ -35,7 +37,5 @@ A total of TWO WHOLE SKINS<br>
 - Angelic Serenade with Lasty Darson | themed deep blue (vndb default look)
 
 ![alt skin](githubImgs/vndbSkin.png)
-
-[Play here]()<br>
 
 Okay~ Shake it now, baby now~♪
