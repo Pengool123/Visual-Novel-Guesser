@@ -1,5 +1,4 @@
 <script>
-    const basepath = "/";
 </script>
 
 <main class=" min-h-[6vh]">
@@ -11,8 +10,8 @@
     <div id="banner"
     class=" bg-[var(--outline)] h-2vh text-[calc(min(1.5vh,1.5vw))] text-center
     [&>*]:mx-[2vw]">
-        <a href="{basepath}">Home</a>
-        <a href="{basepath}settings">Settings</a>
+        <a href="/">Home</a>
+        <a href="/settings">Settings</a>
         <a href="https://github.com/Pengool123">GitHub</a>
     </div>
 </main>
