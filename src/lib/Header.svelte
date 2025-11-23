@@ -1,6 +1,6 @@
 <script>
     import {Link} from 'svelte-routing';
-    const basepath = "/Visual-Novel-Guesser/";
+    const basepath = "/";
 </script>
 
 <main class=" min-h-[6vh]">
