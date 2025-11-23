@@ -42,7 +42,7 @@
 
 </script>
 
-<Router url="{window.location.pathname}" basepath="/Visual-Novel-Guesser">
+<Router url="{window.location.pathname}">
     <main
     class=" min-h-screen bg-[var(--bg-col)] text-[var(--text-col)]">
 
