@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",
+    "svelte-routing": "^2.13.0",
     "tailwindcss": "^4.1.14"
   },
   "homepage": "https://pengool123.github.io/Visual-Novel-Guesser/"
