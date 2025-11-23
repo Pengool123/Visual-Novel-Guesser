@@ -1,6 +1,6 @@
 # Visual Novel Guesser
 
-[Play here](https://pengool123.github.io/Visual-Novel-Guesser/)<br>
+[**Play Here**](https://visual-novel-guesser.vercel.app/)<br>
 
 ![Blank look](githubImgs/initLook.png)
 <br>
