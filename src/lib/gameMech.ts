@@ -35,8 +35,6 @@ export function reset(){
         }
         resetHintInput();
         currVN.set(VNList[rand]);
-        console.log(get(currVN));
-
         getMisc();
         hintAmount.set(0);
         relatedList.set(new Array(Object.keys(Relation).length/2).fill([]));
