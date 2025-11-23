@@ -4,6 +4,6 @@ import tailwindcss from '@tailwindcss/vite';
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [tailwindcss(), svelte()],
-    base: '/visual-novel-guesser-2/'
+    base: '/Visual-Novel-Guesser/'
 });
 //# sourceMappingURL=vite.config.js.map
