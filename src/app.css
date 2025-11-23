@@ -9,7 +9,7 @@
   --transp-bg: rgba(176, 176, 176, 0.5);
   --alt-transp-bg: rgba(133, 133, 133, 0.5);
   --intractable-bg: rgb(50, 50, 50);
-  --bg-img: url('/src/assets/icon.png');
+  --bg-img: url('/assets/kagari.png');
   --bg-img-pos: bottom left;
 }
 

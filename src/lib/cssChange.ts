@@ -18,7 +18,7 @@ export default function cssSetup(){
             setCSSVar("--transp-bg", "rgba(176, 176, 176, 0.5)");
             setCSSVar("--alt-transp-bg", "rgba(133, 133, 133, 0.5)");
             setCSSVar("--intractable-bg", "rgb(50, 50, 50)");
-            setCSSVar("--bg-img", "url('/src/assets/kagari.png')");
+            setCSSVar("--bg-img", "url('/assets/kagari.png')");
             setCSSVar("--bg-img-pos", "bottom right");
             break; 
         case "1":
@@ -30,7 +30,7 @@ export default function cssSetup(){
             setCSSVar("--transp-bg", "rgba(3, 30, 97, 0.4)");
             setCSSVar("--alt-transp-bg", "rgba(3, 28, 89, 0.5)");
             setCSSVar("--intractable-bg", "rgb(4, 40, 112)");
-            setCSSVar("--bg-img", "url('/src/assets/angel-bg.jpg')");
+            setCSSVar("--bg-img", "url('/assets/angel-bg.jpg')");
             setCSSVar("--bg-img-pos", "top left");
             break;
         default:
@@ -42,7 +42,7 @@ export default function cssSetup(){
             setCSSVar("--transp-bg", "rgba(176, 176, 176, 0.5)");
             setCSSVar("--alt-transp-bg", "rgba(133, 133, 133, 0.5)");
             setCSSVar("--intractable-bg", "rgb(50, 50, 50)");
-            setCSSVar("--bg-img", "url('/src/assets/kagari.png')");
+            setCSSVar("--bg-img", "url('/assets/kagari.png')");
             setCSSVar("--bg-img-pos", "bottom right");
             break;
         }
