@@ -1,4 +1,5 @@
 <script>
+    import {Link} from "svelte-routing";
 </script>
 
 <main class=" min-h-[6vh]">
@@ -11,7 +12,7 @@
     class=" bg-[var(--outline)] h-2vh text-[calc(min(1.5vh,1.5vw))] text-center
     [&>*]:mx-[2vw]">
         <a href="/">Home</a>
-        <a href="/settings">Settings</a>
+        <Link to="/settings">Settings</Link>
         <a href="https://github.com/Pengool123">GitHub</a>
     </div>
 </main>

@@ -38,7 +38,7 @@
 
     let vnImg: HTMLImgElement;
 
-    $: if($currVN !== undefined){
+    $: if($currVN !== undefined && vnImg !== undefined){
         vnImg.src = $currVN.image.imgUrl;
     }
 
