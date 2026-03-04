@@ -203,7 +203,6 @@ export async function StartUp(){
     }
 
     const data = await response.json();
-    console.log(data);
     const data2 = await response2.json();
 
     //simply make the list first before getting all relations

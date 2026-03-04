@@ -29,14 +29,12 @@ export function reset(){
     let rand: number = 0;
     if(VNList !== undefined){
         while(!found){
-            rand = 18;
-            //rand = Math.floor(Math.random() * VNList.length);
+            rand = Math.floor(Math.random() * VNList.length);
             if(!eroAllowed && !VNList[rand].hasEro){found = true;}
             if(eroAllowed){found = true;}
         }
         resetHintInput();
         currVN.set(VNList[rand]);
-        console.log(get(currVN));
         getMisc();
         hintAmount.set(0);
         relatedList.set(new Array(Object.keys(Relation).length/2).fill([]));
