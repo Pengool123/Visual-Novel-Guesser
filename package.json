@@ -29,8 +29,10 @@
   "dependencies": {
     "svelte-routing": "^2.13.0"
   },
-  "homepage": "https://pengool123.github.io/Visual-Novel-Guesser/",
-  "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "^4.59.0"
-  }
+  "overrides": {
+    "vite": {
+      "rollup": "npm:@rollup/wasm-node"
+    }
+  },
+  "homepage": "https://pengool123.github.io/Visual-Novel-Guesser/"
 }
