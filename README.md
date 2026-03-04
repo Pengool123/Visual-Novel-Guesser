@@ -2,8 +2,10 @@
 
 [**Play Here**](https://visual-novel-guesser.vercel.app/)<br>
 
-## Known issues with deployment
+## Known issues with deployment / Vercel (not 'npm dev run' issues)
 - The background does not show on user's very first visit until they either revisit or go to settings
+
+# About The Game
 
 ![Blank look](githubImgs/initLook.png)
 <br>
