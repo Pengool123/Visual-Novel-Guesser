@@ -2,6 +2,9 @@
 
 [**Play Here**](https://visual-novel-guesser.vercel.app/)<br>
 
+## Known issues with deployment
+- The background does not show on user's very first visit until they either revisit or go to settings
+
 ![Blank look](githubImgs/initLook.png)
 <br>
 Guess the visual novel based on the hints given and tag overlaps from guessed visual novels.<br>
