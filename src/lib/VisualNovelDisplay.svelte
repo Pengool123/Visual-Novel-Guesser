@@ -316,7 +316,7 @@
                         <div id="SSTitleList"
                         class="max-w-1/1 w-full">
                             <p id="SSTitle">Side Story</p>
-                            <div id="SSList" class=" [&>*]ml-[5%]">
+                            <div id="SSList" class=" [&>*]:ml-[5%]">
                                 {#if $relatedList && $relatedList[Relation.SideStory].length}
                                     {#each $relatedList[Relation.SideStory] as title}
                                         <p>{title}<br></p>
