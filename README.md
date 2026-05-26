@@ -29,8 +29,6 @@ Example: Katawa Shoujo shows as 'Long' on the website, but the API deems is 'Med
 
 ## Features
 
-![Settings screen](githubImgs/settings.png)
-
 - Change the spoiler level of what tags will and wont be shown
 - Unblur the image even if it's violent or brutal depending on settings
 
